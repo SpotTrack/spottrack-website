@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Document Head: Metadata, Title, and External Links -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotTrack - Smart Gyms</title>
+    
+    <!-- Fonts and Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Main navigation bar component (Header) -->
+    <header>
+        <!-- Brand logo container -->
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="SpotTrack Logo" class="logo-img">
+        </div>
+        
+        <!-- Primary navigation menu -->
+        <nav class="nav-links">
+            <a href="#about" data-i18n="nav_about">About Us</a>
+            <a href="#features" data-i18n="nav_features">Features</a>
+            <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
+        </nav>
+        
+        <!-- Right-side actions (Language & User Authentication) -->
+        <div class="nav-actions">
+            <button id="lang-toggle" class="btn-lang">ES</button>
+            <a href="login.html" class="btn-login" data-i18n="nav_login">Login</a>
+        </div>
+    </header>
+
+    <!-- Hero Section: Main banner and key benefits -->
+    <section id="hero">
+        <h1 data-i18n="hero_title">Transform your gym management with SpotTrack</h1>
+        <p data-i18n="hero_desc">Smart monitoring for users and staff</p>
+        <a href="#contact" class="btn-primary" data-i18n="hero_btn">Start Now</a>
+        
+        <!-- Benefits statistics grid -->
+        <div class="hero-benefits">
+            <div class="benefit-item">
+                <h4 data-i18n="ben1_title">20%</h4>
+                <p data-i18n="ben1_desc">Cost Reduction</p>
+            </div>
+            <div class="benefit-item">
+                <h4 data-i18n="ben2_title">3-5x</h4>
+                <p data-i18n="ben2_desc">Savings vs corrective</p>
+            </div>
+            <div class="benefit-item">
+                <h4 data-i18n="ben3_title">70%</h4>
+                <p data-i18n="ben3_desc">Improved satisfaction</p>
+            </div>
+            <div class="benefit-item">
+                <h4 data-i18n="ben4_title">24/7</h4>
+                <p data-i18n="ben4_desc">Continuous monitoring</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section: Mission, Vision, and Product Info -->
+    <section id="about">
+        <h2 class="section-title" data-i18n="nav_about">About Us</h2>
+        <div class="about-container">
+            <div class="about-card">
+                <h3 data-i18n="about_mission_title">Mission</h3>
+                <p data-i18n="about_mission_desc">To offer an intelligent monitoring and analytics service for sports equipment usage.</p>
+            </div>
+            <div class="about-card">
+                <h3 data-i18n="about_vision_title">Vision</h3>
+                <p data-i18n="about_vision_desc">To be the leading platform in telemetry and sports asset management in Peru.</p>
+            </div>
+            <div class="about-card">
+                <h3>SpotTrack</h3>
+                <p data-i18n="about_product_desc">Technological platform combining IoT sensors, cloud, and user-centered design to avoid bottlenecks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section: Grid of platform capabilities -->
+    <section id="features">
+        <h2 class="section-title title-black" data-i18n="nav_features">Features</h2>
+        <div class="features-grid">
+            <div class="feature-card"><h3 data-i18n="feat1_title">IoT Edge Sensors</h3><p data-i18n="feat1_desc">Cameras with recognition that only send status (Occupied/Free).</p></div>
+            <div class="feature-card"><h3 data-i18n="feat2_title">Cloud Storage</h3><p data-i18n="feat2_desc">Secure and accessible data from anywhere.</p></div>
+            <div class="feature-card"><h3 data-i18n="feat3_title">Live Heatmap</h3><p data-i18n="feat3_desc">Visualize the status of each machine with heat map colors.</p></div>
+            <div class="feature-card"><h3 data-i18n="feat4_title">Maintenance Alerts</h3><p data-i18n="feat4_desc">Automatic notifications when a machine exceeds 500 hours.</p></div>
+            <div class="feature-card"><h3 data-i18n="feat5_title">Analytical Dashboard</h3><p data-i18n="feat5_desc">Historical usage charts to optimize equipment distribution.</p></div>
+            <div class="feature-card"><h3 data-i18n="feat6_title">Alternative Routines</h3><p data-i18n="feat6_desc">App suggests alternative exercises when machines are busy.</p></div>
+        </div>
+    </section>
+
+    <!-- Experiences Section: User vs Admin views -->
+    <section id="experiences">
+        <h2 class="section-title title-cyan" data-i18n="exp_title">Two experiences</h2>
+        <div class="experiences-grid">
+            <div class="experience-card">
+                <h3 data-i18n="exp_admin_title">Administrator</h3>
+                <p data-i18n="exp_admin_desc">Telemetry and ROI Dashboard</p>
+            </div>
+            <div class="experience-card">
+                <h3 data-i18n="exp_user_title">Final User</h3>
+                <p data-i18n="exp_user_desc">Live Heatmap</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section: Subscription plans -->
+    <section id="pricing">
+        <h2 class="section-title title-black" data-i18n="nav_pricing">Pricing</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Plan Basic</h3>
+                <p class="plan-desc" data-i18n="price_basic_desc">Ideal for small studios. Includes live heatmap.</p>
+                <div class="price-tag">
+                    <span class="price-amount" data-i18n="price_basic_amount">$69</span>
+                    <span class="price-period" data-i18n="price_period">USD/month</span>
+                </div>
+            </div>
+            <!-- Highlighted popular plan -->
+            <div class="pricing-card popular-plan">
+                <h3>Plan Mid</h3>
+                <p class="plan-desc" data-i18n="price_mid_desc">Most popular. Includes predictive maintenance alerts.</p>
+                <div class="price-tag">
+                    <span class="price-amount" data-i18n="price_mid_amount">$109</span>
+                    <span class="price-period" data-i18n="price_period">USD/month</span>
+                </div>
+            </div>
+            <div class="pricing-card">
+                <h3>Plan Platinum</h3>
+                <p class="plan-desc" data-i18n="price_plat_desc">Premium. Multi-branch management and API access.</p>
+                <div class="price-tag">
+                    <span class="price-amount" data-i18n="price_plat_amount">$189</span>
+                    <span class="price-period" data-i18n="price_period">USD/month</span>
+                </div>
+            </div>
+        </div>
+    </section>
