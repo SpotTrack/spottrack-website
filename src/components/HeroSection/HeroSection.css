@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Istok Web", sans-serif;
+  font-size: 16px;
+}
+
+/* === Fade-in animations (replacing Angular @trigger animations) === */
+.hero-header {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.hero-header.header-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-navbar {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+.hero-navbar.navbar-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-section {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+.hero-section.hero-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Layout === */
+.hero-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  color: white;
+  position: relative;
+  z-index: 1;
+  gap: 8%;
+}
+
+.language-switcher {
+  padding: 10%;
+}
+
+.hero-navbar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10%;
+  justify-content: center;
+}
+
+.navbar-button {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: gray;
+  font-family: "Istok Web", sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-button-hovered {
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  padding: 6%;
+  text-align: center;
+  background: #000000;
+  color: white;
+  perspective: 1000px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Particle layers */
+.hero-section::before,
+.hero-section::after,
+.particles-overlay {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image:
+    radial-gradient(#ffffff 1px, transparent 1px),
+    radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  opacity: 0.4;
+  will-change: transform;
+  transform-style: preserve-3d;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-section::before {
+  animation: particleFloatLejos 30s ease-in-out infinite;
+}
+
+.hero-section::after {
+  background-size: 80px 80px;
+  opacity: 0.2;
+  animation: particleFloatMedio 20s ease-in-out infinite reverse;
+}
+
+.particles-overlay {
+  background-image: radial-gradient(#4ade80 2px, transparent 2px);
+  background-size: 120px 120px;
+  opacity: 0.15;
+  animation: particleFloatCerca 15s ease-in-out infinite;
+}
+
+.hero-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20%;
+  justify-content: center;
+}
+
+.hero-wrapper button {
+  width: 10%;
+  align-self: center;
+}
+
+.hero-section h1 {
+  font-size: 70px;
+}
+
+.hero-section h2 {
+  font-size: 32px;
+}
+
+.hero-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 5fr));
+  gap: 20%;
+}
+
+.hero-section button {
+  border: none;
+  background-color: turquoise;
+  color: black;
+  border-radius: 8px;
+  padding: 0.8%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  font-family: "Istok Web", sans-serif;
+}
+
+.hero-section button:hover {
+  background-color: gray;
+  transition: 0.2s ease-in-out;
+}
+
+.login-btn {
+  background-color: yellow;
+  color: black;
+  border: none;
+  width: 300%;
+  height: 120%;
+  border-radius: 8px;
+  font-family: "Istok Web", sans-serif;
+  align-items: center;
+  cursor: pointer;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, yellow, yellow);
+  transition: all 0.5s ease;
+}
+
+.login-btn:hover {
+  color: white;
+  background: linear-gradient(
+    to right,
+    #4ade80,
+    #40e0d0,
+    #ffcc00,
+    #4ade80
+  );
+  background-size: 200% auto;
+  animation: shine-button 2s linear infinite;
+}
+
+@keyframes shine-button {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: 500% center;
+  }
+}
+
+.login-div {
+  display: grid;
+  align-items: center;
+}
+
+.shimmer-text {
+  color: #ffcc00;
+  background: linear-gradient(
+    to right,
+    #4ade80 20%,
+    #fef08a 40%,
+    #fef08a 60%,
+    #40e0d0 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+@keyframes shine {
+  to {
+    background-position: 300% center;
+  }
+}
+
+@keyframes particleFloatLejos {
+  0%   { transform: translateZ(-400px) rotateX(0deg) rotateY(0deg); }
+  50%  { transform: translateZ(-200px) rotateX(15deg) rotateY(15deg); }
+  100% { transform: translateZ(-400px) rotateX(0deg) rotateY(0deg); }
+}
+
+@keyframes particleFloatMedio {
+  0%   { transform: translateZ(0) rotateX(0deg) rotateY(0deg) translateX(-50px); }
+  50%  { transform: translateZ(100px) rotateX(-20deg) rotateY(20deg) translateX(50px); }
+  100% { transform: translateZ(0) rotateX(0deg) rotateY(0deg) translateX(-50px); }
+}
+
+@keyframes particleFloatCerca {
+  0%   { transform: translateZ(200px) rotateX(0deg) rotateY(0deg); }
+  50%  { transform: translateZ(450px) rotateX(25deg) rotateY(-25deg); }
+  100% { transform: translateZ(200px) rotateX(0deg) rotateY(0deg); }
+}
