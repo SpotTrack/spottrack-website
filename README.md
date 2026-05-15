@@ -1,2 +1,3 @@
-# Landing-Page
-Sitio web estático (Landing Page) desarrollado con HTML, CSS y JS para la presentación del modelo de negocio y captación de usuarios de SpotTrack
+# Landing-Page / Website
+
+Static landing page built with HTML, CSS, and Vue.js to present **SpotTrack** — an IoT-based gym monitoring platform that tracks equipment availability, occupancy, and usage in real time.
