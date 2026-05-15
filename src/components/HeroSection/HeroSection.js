@@ -7,7 +7,7 @@ export default {
     LanguageSwitcher
   },
   setup() {
-    const appUrl = 'https://purple-tree-092d40a10.7.azurestaticapps.net'
+    const appUrl = 'https://witty-tree-0f4a0570f.7.azurestaticapps.net'
 
     const btnStates = ref([false, false, false, false])
 
