@@ -1,0 +1,102 @@
+/* Sección contenedora principal */
+.st-features-section {
+  padding: 80px 0;
+  background-color: #111111;
+  font-family: 'Istok Web', sans-serif;
+}
+
+/* Contenedor centralizado con ancho máximo */
+.st-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Títulos */
+.st-main-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.st-main-subtitle {
+  color: #f7b731;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+/* Contenedor Grid */
+.st-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card (reemplaza mat-card) */
+.st-card {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.st-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Iconos (SVG) */
+.st-icon {
+  width: 40px;
+  height: 40px;
+  color: #26e6c1;
+  margin-bottom: 20px;
+}
+
+/* Header y contenido */
+.st-card-header {
+  padding: 0;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.st-card-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.st-card-content {
+  padding: 0;
+}
+
+.st-card-text {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 900px) {
+  .st-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .st-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .st-main-title {
+    font-size: 2rem;
+  }
+}
