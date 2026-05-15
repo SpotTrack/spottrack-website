@@ -39,25 +39,25 @@
 /* === Layout === */
 .hero-header {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   background: #000000;
   color: white;
   position: relative;
   z-index: 1;
-  gap: 8%;
+  padding: 0 32px;
+  gap: 24px;
 }
 
 .language-switcher {
-  padding: 10%;
+  padding: 8px 0;
 }
 
 .hero-navbar {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10%;
+  display: flex;
+  gap: 24px;
   justify-content: center;
+  align-items: center;
 }
 
 .navbar-button {
@@ -177,8 +177,9 @@ h1 {
   background-color: yellow;
   color: black;
   border: none;
-  width: 300%;
-  height: 120%;
+  width: auto;
+  padding: 8px 20px;
+  height: auto;
   border-radius: 8px;
   font-family: "Istok Web", sans-serif;
   align-items: center;

@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script src="LanguageSwitcher.js"></script>
+<script src="./LanguageSwitcher.js"></script>
 
 <style src="./LanguageSwitcher.css" scoped></style>
 
